@@ -375,8 +375,8 @@
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">MY SKILLS</h4>
-        <h2 class="st-section-heading-subtitle">MY SKILLS</h2>
+        <h4 class="st-section-heading-title">MIS HABILIDADES</h4>
+        <h2 class="st-section-heading-subtitle">MIS HABILIDADES</h2>
       </div>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
@@ -480,8 +480,8 @@
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">RESUME</h4>
-        <h2 class="st-section-heading-subtitle">RESUME</h2>
+        <h4 class="st-section-heading-title">RESUMEN</h4>
+        <h2 class="st-section-heading-subtitle">RESUMEN</h2>
       </div>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
@@ -492,7 +492,7 @@
           <div class="st-resume-wrap">
             <div class="st-resume-heading">
               <img src="assets/img/icon/resume-icon1.png" alt="resume-icon">
-              <h2 class="st-resume-heading-title">Experience</h2>
+              <h2 class="st-resume-heading-title">Experiencia</h2>
             </div>
 
             <div class="st-height-b50 st-height-lg-b30"></div>
@@ -538,7 +538,7 @@
           <div class="st-resume-wrap">
             <div class="st-resume-heading">
               <img src="assets/img/icon/resume-icon2.png" alt="resume-icon">
-              <h2 class="st-resume-heading-title">Education</h2>
+              <h2 class="st-resume-heading-title">Educacion</h2>
             </div>
             <div class="st-height-b50 st-height-lg-b30"></div>
 
@@ -586,8 +586,8 @@
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">PORTFOLIOS</h4>
-        <h2 class="st-section-heading-subtitle">PORTFOLIOS</h2>
+        <h4 class="st-section-heading-title">PORTAFOLIOS</h4>
+        <h2 class="st-section-heading-subtitle">PORTAFOLIOS</h2>
       </div>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
@@ -966,8 +966,8 @@
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">CONTACT ME</h4>
-        <h2 class="st-section-heading-subtitle">CONTACT ME</h2>
+        <h4 class="st-section-heading-title">CONTACTAME</h4>
+        <h2 class="st-section-heading-subtitle">CONTACTAME</h2>
       </div>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
@@ -977,22 +977,24 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h3 class="st-contact-title">Just say Hello</h3>
+          <h3 class="st-contact-title">Mandame un Correo</h3>
           <div id="st-alert"></div>
           <form action="#" method="POST" class="st-contact-form" id="contact-form">
             <div class="st-form-field">
-              <input type="text" id="name" name="name" placeholder="Your Name" required>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
             </div>
             <div class="st-form-field">
-              <input type="text" id="email" name="email" placeholder="Your Email" required>
+              <input type="text" id="email" name="email" placeholder="Tu Email" required>
             </div>
             <div class="st-form-field">
-              <input type="text" id="subject" name="subject" placeholder="Your Subject" required>
+              <input type="text" id="subject" name="subject" placeholder="Asunto" required>
             </div>
             <div class="st-form-field">
-              <textarea cols="30" rows="10" id="msg" name="msg" placeholder="Your Message" required></textarea>
+              <textarea cols="30" rows="10" id="msg" name="msg" placeholder="Tu Mensaje" required></textarea>
             </div>
-            <button class="st-btn st-style1 st-color1" type="submit" id="submit" name="submit">Send message</button>
+            <button class="st-btn st-style1 st-color1 g-recaptcha"  data-sitekey="6LcB1R8iAAAAACts_Df-wwjVBatsd1TcN1cJGpYm"
+            data-callback='onSubmit'
+            data-action='submit' type="submit" id="submit" name="submit">Enviar Mensaje</button>
           </form>
         </div>
         <div class="st-height-b0 st-height-lg-b30"></div>
@@ -1009,8 +1011,8 @@
               <i class="fas fa-envelope"></i>
               <div class="st-single-info-details">
                 <h4>Email</h4>
-                <a href="#">devis@example.com</a>
-                <a href="#">info@support.com</a>
+                <a href="#">cristian2020til@gmail.com</a>
+                <a href="#">cristianstiven1209@outlook.com</a>
               </div>
             </div>
             <div class="st-single-contact-info">
@@ -1029,21 +1031,21 @@
               </div>
             </div>
             <div class="st-social-info">
-              <div class="st-social-text">Visite my social profile and get connected</div>
+              <div class="st-social-text">Visita mis redes sociales</div>
               <div class="st-social-link">
-                <a href="#" class="st-social-btn active">
-                  <span class="st-social-icon"><i class="fab fa-dribbble"></i></span>
-                  <span class="st-icon-name">Dribbble</span>
+                <a href="https://github.com/crixus12cr" target="_blank" rel="noopener noreferrer" class="st-social-btn active">
+                  <span class="st-social-icon"><i class="fab fa-github"></i></span>
+                  <span class="st-icon-name">Github</span>
                 </a>
-                <a href="#" class="st-social-btn">
-                  <span class="st-social-icon"><i class="fab fa-behance"></i></span>
-                  <span class="st-icon-name">Behance</span>
+                <a href="https://www.instagram.com/crixus12cr/" target="_blank" rel="noopener noreferrer" class="st-social-btn">
+                  <span class="st-social-icon"><i class="fab fa-instagram"></i></span>
+                  <span class="st-icon-name">Instagram</span>
                 </a>
-                <a href="#" class="st-social-btn">
-                  <span class="st-social-icon"><i class="fab fa-twitter"></i></span>
-                  <span class="st-icon-name">Twitter</span>
+                <a href="https://www.facebook.com/cristianstiven.perdomogarcia" target="_blank" rel="noopener noreferrer" class="st-social-btn">
+                  <span class="st-social-icon"><i class="fab fa-facebook"></i></span>
+                  <span class="st-icon-name">Facebook</span>
                 </a>
-                <a href="#" class="st-social-btn">
+                <a href="https://www.linkedin.com/in/cristian-perdomo-b9346a227/" target="_blank" rel="noopener noreferrer" class="st-social-btn">
                   <span class="st-social-icon"><i class="fab fa-linkedin"></i></span>
                   <span class="st-icon-name">LinkedIn</span>
                 </a>
@@ -1074,5 +1076,12 @@
   <script src="{{ asset('assets/js/wow.min.js') }}"></script>
   <script src="{{ asset('assets/js/particles.min.js') }}"></script>
   <script src="{{ asset('assets/js/main.js') }}"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <script>
+    function onSubmit(token) {
+      document.getElementById("contact-form").submit();
+    }
+  </script>
 </body>
 </html>
