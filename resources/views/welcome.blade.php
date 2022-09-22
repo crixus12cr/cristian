@@ -1,132 +1,1078 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="no-js" lang="es">
 
-        <title>Laravel</title>
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Laralink">
+  <!-- Page Title -->
+  <title>Cristian Perdomo - Portafolio</title>
+  <!-- Favicon Icon -->
+  <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/lightgallery.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endif
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Build v{{ Illuminate\Foundation\Application::VERSION }}
-                    </div>
-                </div>
+<body id="home" class="st-get-sidebar">
+  <!-- Start Header Section -->
+  <header class="st-site-header st-style2 st-sticky-header">
+    <div class="st-main-header">
+      <div class="container">
+        <div class="st-main-header-in">
+          <div class="st-main-header-left">
+            <div class="st-header-author"><img src="assets/img/section/hero-img.jpg" alt=""></div>
+          </div>
+          <div class="st-main-header-right">
+            <div class="st-nav">
+              <ul class="st-nav-list st-onepage-nav">
+                <li><a href="#home" class="st-smooth-move">Inicio</a></li>
+                <li><a href="#about" class="st-smooth-move">Sobre mi</a></li>
+                <li><a href="#resume" class="st-smooth-move">Educacion & Experiencia</a></li>
+                <li><a href="#portfolio" class="st-smooth-move">Portafolio</a></li>
+                <li><a href="#blog" class="st-smooth-move">Blog</a></li>
+                <li><a href="#contact" class="st-smooth-move">Contacto</a></li>
+              </ul>
+              {{-- <div class="st-hero-btn">
+                <a href="#contact" class="st-btn st-style2 st-color1 st-btn-md st-smooth-move">Hire me</a>
+              </div> --}}
             </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Section -->
+
+  <!-- Start Hero Seciton -->
+  <section class="st-hero st-style2">
+    <div class="container">
+      <div class="st-hero-text">
+        <h1>Hola, Soy <span>Cristian Perdomo</span></h1>
+        <p>Soy desarrollador backend . <br>I also make website more & more interactive with web animations.</p>
+        <div class="st-hero-social-links">
+          <a href="#" class="st-social-btn">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="st-social-btn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="st-social-btn">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="background-wrap">
+      <div class="bubble x1"></div>
+      <div class="bubble x2"></div>
+      <div class="bubble x3"></div>
+      <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
+      <div class="bubble x6"></div>
+      <div class="bubble x7"></div>
+      <div class="bubble x8"></div>
+      <div class="bubble x9"></div>
+      <div class="bubble x10"></div>
+    </div>
+    <div id="particles-js"></div>
+  </section>
+  <!-- End Hero Seciton -->
+
+  <!-- Start About Seciton -->
+  <section id="about" class="st-about-wrap">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">SOBRE MI</h4>
+        <h2 class="st-section-heading-subtitle">CONOCEME</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInLeft">
+          <div class="st-about-img-wrap">
+            <div class="st-about-img st-dynamic-bg st-bg" data-src="assets/img/section/about.jpg"></div>
+          </div>
+          <div class="st-height-b0 st-height-lg-b30"></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="st-vertical-middle">
+            <div class="st-vertical-middle-in">
+              <div class="st-text-block st-style1">
+                <h2 class="st-text-block-title">¡Hola! Soy Cristian Perdomo</h2>
+                <h4 class="st-text-block-subtitle">Desarrollador Backend laravel</h4>
+                <div class="st-text-block-text">
+                  <p>Soy apasionado a la tecnología y sus procesos, entre estos incluido el aprendizaje y la arquitectura del software. Me destaco por ser proactivo y autodidacta, todo esto llevado de la mano con una de mis frases favoritas: “La creatividad es la inteligencia divirtiéndose” . Albert Einstein</p>
+                </div>
+                <ul class="st-text-block-details st-mp0">
+                  <li><span>Telefono</span> : <span><a href="https://api.whatsapp.com/send?phone=573125620823&text=Hola%20Quiero%20Comunicarme%20Contigo" style="list-style: none;color:#A9ADB8; cursor:pointer;" target="_blank" rel="noopener noreferrer"">+57 3125620823</a></span></li>
+                  <li><span>Email</span> : <span>cristian2020til@gmail.com</span></li>
+                  <li><span>Pais</span> : <span>Colombia</span></li>
+                  <li><span>Idiomas</span> : <span>Español (nativo), Ingles (tecnico)</span></li>
+                  <li><span>Freelance</span> : <span>Available</span></li>
+                </ul>
+                <div class="st-text-block-btn">
+                  <a href="#" class="st-btn st-style1 st-color1">Descargar CV</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Seciton -->
+
+  <!-- Start Service Seciton -->
+  <section>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">SERVICES</h4>
+        <h2 class="st-section-heading-subtitle">SERVICES</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <!-- Iconbox Container -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="st-iconbox st-style1">
+            <div class="st-iconbox-icon">
+              <svg viewBox="0 0 512 512">
+                <g>
+                  <path d="m336 144a8 8 0 0 0 -8 8v104a8 8 0 0 0 16 0v-104a8 8 0 0 0 -8-8z" />
+                  <path d="m336 272a8 8 0 0 0 -8 8v8a8 8 0 0 0 16 0v-8a8 8 0 0 0 -8-8z" />
+                  <path
+                    d="m496 24h-480a8 8 0 0 0 -8 8v352a8 8 0 0 0 8 8h288v64a32 32 0 0 0 64 0v-64h48a8.008 8.008 0 0 0 5.66-2.34l80-80a8.008 8.008 0 0 0 2.34-5.66v-272a8 8 0 0 0 -8-8zm-144 432a16 16 0 0 1 -32 0v-16h32zm0-32h-32v-8h32zm0-24h-32v-264h32zm0-280h-32v-6.11l.94-1.89h30.12l.94 1.89zm-23.06-24 7.06-14.11 7.06 14.11zm95.06 268.69v-52.69h52.69zm64-68.69h-72a8 8 0 0 0 -8 8v72h-40v-264a8.081 8.081 0 0 0 -.84-3.58l-24-48a8.009 8.009 0 0 0 -14.32 0l-24 48a8.081 8.081 0 0 0 -.84 3.58v264h-280v-336h464z" />
+                  <path d="m48 72h72a8 8 0 0 0 0-16h-72a8 8 0 0 0 0 16z" />
+                  <path d="m80 88a8 8 0 0 0 -8-8h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8z" />
+                  <path
+                    d="m288 88a104.118 104.118 0 0 0 -104 104 8 8 0 0 0 16 0 88.1 88.1 0 0 1 88-88 8 8 0 0 0 0-16z" />
+                  <path
+                    d="m240 184a8 8 0 0 0 -8 8 80.091 80.091 0 0 1 -80 80 8 8 0 0 0 0 16 96.108 96.108 0 0 0 96-96 8 8 0 0 0 -8-8z" />
+                  <path
+                    d="m456 192a8 8 0 0 0 16 0 80.091 80.091 0 0 0 -80-80 8 8 0 0 0 0 16 64.072 64.072 0 0 1 64 64z" />
+                  <path
+                    d="m168 216a48 48 0 1 0 -48 48 48.053 48.053 0 0 0 48-48zm-48 32a32 32 0 1 1 32-32 32.036 32.036 0 0 1 -32 32z" />
+                  <path
+                    d="m264 288a24 24 0 1 0 24 24 24.028 24.028 0 0 0 -24-24zm0 32a8 8 0 1 1 8-8 8.009 8.009 0 0 1 -8 8z" />
+                  <path
+                    d="m432 112a24 24 0 1 0 -24-24 24.028 24.028 0 0 0 24 24zm0-32a8 8 0 1 1 -8 8 8.009 8.009 0 0 1 8-8z" />
+                </g>
+              </svg>
+            </div>
+            <h2 class="st-iconbox-title">Sketches</h2>
+            <div class="st-iconbox-text">Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.</div>
+          </div>
+          <div class="st-height-b30 st-height-lg-b30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4 col-md-6">
+          <div class="st-iconbox st-style1">
+            <div class="st-iconbox-icon">
+              <svg viewBox="0 0 512 512">
+                <g>
+                  <g>
+                    <path d="M360,104h-80c-4.418,0-8,3.582-8,8v80c0,4.418,3.582,8,8,8h80c4.418,0,8-3.582,8-8v-80C368,107.582,364.418,104,360,104z
+                  M288,184v-52.693L340.693,184H288z M352,172.68L299.32,120H352V172.68z" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path d="M360,216h-80c-4.418,0-8,3.582-8,8v80c0,4.418,3.582,8,8,8h80c4.418,0,8-3.582,8-8v-80C368,219.582,364.418,216,360,216z
+                  M288,296v-52.685L340.685,296H288z M352,284.688L299.312,232H352V284.688z" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="272" y="328" width="64" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="352" y="328" width="16" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="272" y="360" width="96" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="272" y="392" width="96" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="136" y="184" width="80" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="136" y="248" width="80" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="136" y="312" width="80" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path d="M464,56c-4.418,0-8,3.582-8,8v32h-48V16c0-8.837-7.163-16-16-16H120c-8.837,0-16,7.163-16,16v80H56V64
+                 c0-4.418-3.582-8-8-8c-0.48,0-48,0.728-48,64v312c0,30.504,30.4,44.632,46.4,47.84c0.526,0.111,1.062,0.165,1.6,0.16h56v16
+                 c0,8.837,7.163,16,16,16h272c8.837,0,16-7.163,16-16v-16h56c0.538,0.005,1.074-0.049,1.6-0.16c16-3.208,46.4-17.336,46.4-47.84
+                 V120C512,56.728,464.48,56,464,56z M16,120c0-32.64,14.4-43.088,24-46.4v312.232c-8.773,2.722-16.927,7.139-24,13V120z M104,464
+                 H48.88C44.104,462.856,16,455.128,16,432c0-24.96,32.248-31.88,33.6-32.16c3.725-0.76,6.401-4.038,6.4-7.84V112h48V464z M120,88
+                 h92.12L120,145.543V88z M232,94.447V152h-92.136L232,94.447z M120,168h112v48H120V168z M120,232h112v48H120V232z M120,296h112v48
+                 H120V296z M120,360h94.186L120,424.724V360z M232,367.172V432h-94.337L232,367.172z M392,496H120v-48h272V496z M392,432H248V88
+                 h144V432z M392,72H120V16h272V72z M463.136,464H408V112h48v280c-0.001,3.802,2.675,7.08,6.4,7.84
+                 c0.368,0.072,33.6,7.008,33.6,32.16C496,455.256,468.072,462.84,463.136,464z M496,398.832c-7.073-5.861-15.227-10.278-24-13V73.6
+                 c9.496,3.32,24,13.776,24,46.4V398.832z" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="200" y="40" width="64" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="280" y="40" width="16" height="16" />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <rect x="312" y="40" width="16" height="16" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h2 class="st-iconbox-title">UI/UX Design</h2>
+            <div class="st-iconbox-text">Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.</div>
+          </div>
+          <div class="st-height-b30 st-height-lg-b30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4 col-md-6">
+          <div class="st-iconbox st-style1">
+            <div class="st-iconbox-icon">
+              <svg viewBox="0 0 64 64">
+                <path
+                  d="m62.618 45-5-10h-1.618v-34h-14v34h-19v-17.217l-4.676-10.286c-.413-.909-1.325-1.497-2.324-1.497s-1.911.588-2.324 1.496l-4.676 10.287v17.217h-2.618l-5 10h5.618v18h50v-18zm-18.618-14h6v-2h-6v-2h4v-2h-4v-2h6v-2h-6v-2h4v-2h-4v-2h6v-2h-6v-2h4v-2h-4v-2h6v-2h-6v-2h10v32h-10zm12.382 6 3 6h-21.764l-3-6zm-39.387-2v-15.132l2.002 1.333 2.003-1.334v15.133zm3.743-17.361-1.741 1.159-3.002-2.001-2.998 2-1.735-1.158 1.654-3.639h6.167zm-5.242-9.316c.18-.393.828-.394 1.008.001l1.67 3.676h-4.349zm-4.496 11.547 1.997 1.333 1.998-1.333v15.13h-3.995zm-3.382 17.13h21.764l-3 6h-21.764zm1.382 8h18.618l3.382-6.764v22.764h-22zm46 16h-22v-22.764l3.382 6.764h18.618z" />
+                <path d="m19 57h2v2h-2z" />
+                <path d="m11 57h2v2h-2z" />
+                <path d="m15 57h2v2h-2z" />
+                <path d="m11 53h10v2h-10z" />
+                <path
+                  d="m28 9.657c0-1.465 1.192-2.657 2.657-2.657h.686c1.465 0 2.657 1.192 2.657 2.657 0 .709-.276 1.376-.778 1.879l-5.222 5.222v8.242h6v-5.758l3.464-3.464c1.636-1.635 2.536-3.809 2.536-6.121 0-4.773-3.884-8.657-8.657-8.657h-.686c-4.773 0-8.657 3.884-8.657 8.657v2.343h6zm-2 0v.343h-2v-.343c0-3.671 2.986-6.657 6.657-6.657h.686c3.671 0 6.657 2.986 6.657 6.657 0 1.777-.692 3.449-1.95 4.707l-4.05 4.05v4.586h-2v-5.414l4.637-4.636c.879-.881 1.363-2.051 1.363-3.293 0-2.568-2.089-4.657-4.657-4.657h-.686c-2.568 0-4.657 2.089-4.657 4.657z" />
+                <path
+                  d="m28 30c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3-3 1.346-3 3zm4 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1z" />
+              </svg>
+            </div>
+            <h2 class="st-iconbox-title">Product Design</h2>
+            <div class="st-iconbox-text">Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.</div>
+          </div>
+          <div class="st-height-b30 st-height-lg-b30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4 col-md-6">
+          <div class="st-iconbox st-style1">
+            <div class="st-iconbox-icon">
+              <svg viewBox="0 0 512 512">
+                <g>
+                  <path d="M216,456H160a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16Z" />
+                  <path d="M248,456h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z" />
+                  <path
+                    d="M442.68,363.48,392,312.8V165.27l22.4-22.4a7.953,7.953,0,0,0,1.93-3.13L433.3,88.82A8,8,0,0,0,423.18,78.7L392,89.09V40A32.042,32.042,0,0,0,360,8H152a32.042,32.042,0,0,0-32,32V86.53L69.32,137.21a8,8,0,0,0,0,11.31L120,199.2V346.74L80.63,386.11A32.005,32.005,0,0,0,120,436.01V472a32.042,32.042,0,0,0,32,32H360a32.042,32.042,0,0,0,32-32V425.47l50.68-50.68A8,8,0,0,0,442.68,363.48ZM413.06,98.94l-4.99,14.97-9.98-9.98Zm-31.95,10.64,21.31,21.31-.67,2-4.32,4.32-22.64-22.64,4.32-4.32ZM306.92,227.72l-5.66-5.66,67.88-67.88a8,8,0,1,0-11.32-11.32l-67.88,67.88-5.66-5.65,79.2-79.2,22.63,22.64-7.74,7.74-.05.05ZM376,181.27V296.8l-57.76-57.76ZM293.44,24l-4.5,16H222.25l-4-16ZM136,40a16.021,16.021,0,0,1,16-16h49.75l6.49,25.94A8,8,0,0,0,216,56h79a8,8,0,0,0,7.7-5.83L310.06,24H360a16.021,16.021,0,0,1,16,16V94.42l-3.74,1.25a7.953,7.953,0,0,0-3.13,1.93l-96.16,96.17L148.52,69.32a8,8,0,0,0-11.31,0L136,70.53ZM114.59,420.05a16.005,16.005,0,1,1-22.64-22.63l11.31-11.32,22.64,22.64Zm-.01-45.26,5.66-5.65,22.62,22.62-5.65,5.66Zm90.51-90.5,22.63,22.63-73.54,73.54-22.63-22.64ZM136,330.74V215.2l57.77,57.77ZM376,472a16.021,16.021,0,0,1-16,16H152a16.021,16.021,0,0,1-16-16V421.26L239.04,318.24,363.48,442.68a8,8,0,0,0,11.31,0l1.21-1.21Zm-6.86-46.29-22.63-22.63,5.66-5.66a8,8,0,0,0-11.32-11.31l-5.65,5.65-11.32-11.31,16.97-16.97a8,8,0,0,0-11.31-11.31l-16.97,16.97-11.32-11.32,5.66-5.65a8,8,0,0,0-11.31-11.32l-5.66,5.66L278.63,335.2l16.97-16.97a8,8,0,0,0-11.32-11.32l-16.97,16.97L256,312.57l5.66-5.66a8,8,0,1,0-11.32-11.31l-5.65,5.65a.035.035,0,0,1-.02-.01l-11.3-11.3,16.97-16.97a8,8,0,0,0-11.31-11.31l-16.97,16.97-11.29-11.29c-.01-.01-.01-.02-.02-.03l5.65-5.65a8,8,0,1,0-11.31-11.32L199.43,256l-11.31-11.31,16.97-16.97a8,8,0,0,0-11.32-11.32L176.8,233.37l-11.31-11.31,5.66-5.66a8,8,0,0,0-11.32-11.31l-5.65,5.66-11.32-11.32,16.97-16.97a8,8,0,0,0-11.31-11.31l-16.97,16.97L120.24,176.8l5.65-5.65a8,8,0,0,0-11.31-11.32l-5.66,5.66L86.29,142.86l39.6-39.59L408.73,386.11Zm50.91-50.92L137.21,91.95l5.65-5.66L267.29,210.72c.01.01.01.02.02.03s.02.01.03.02l16.93,16.94c.01,0,.01,0,.01.01s.01,0,.01.01l16.95,16.94c.01.01.01.02.02.03s.02.01.03.02l77.02,77.02a.234.234,0,0,0,.07.07l47.33,47.33Z" />
+                </g>
+              </svg>
+            </div>
+            <h2 class="st-iconbox-title">App Design</h2>
+            <div class="st-iconbox-text">Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.</div>
+          </div>
+          <div class="st-height-b0 st-height-lg-b30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4 col-md-6">
+          <div class="st-iconbox st-style1">
+            <div class="st-iconbox-icon">
+              <svg viewBox="0 0 512 512">
+                <path
+                  d="m48 496h416a32.036 32.036 0 0 0 32-32v-416a32.036 32.036 0 0 0 -32-32h-416a32.036 32.036 0 0 0 -32 32v416a32.036 32.036 0 0 0 32 32zm-16-32h32v16h-16a16.01833 16.01833 0 0 1 -16-16zm128-48h-80v-16h80zm0 16v16h-80v-16zm0 32v16h-80v-16zm0-80h-80v-16h80zm-32-32h-96v-176h96zm-64 16v16h-32v-16zm0 32v16h-32v-16zm0 32v16h-32v-16zm400 48h-288v-112h304v96a16.01833 16.01833 0 0 1 -16 16zm16-432v304h-336v-320h320a16.01833 16.01833 0 0 1 16 16zm-432-16h80v128h-96v-112a16.01833 16.01833 0 0 1 16-16z" />
+                <path d="m208 384h104v16h-104z" />
+                <path d="m288 416h144v16h-144z" />
+                <path d="m248 448h48v16h-48z" />
+                <path d="m320 448h24v16h-24z" />
+                <path d="m376 384h56v16h-56z" />
+                <circle cx="56" cy="56" r="8" />
+                <circle cx="80" cy="56" r="8" />
+                <circle cx="104" cy="56" r="8" />
+                <path d="m384 312h80v16h-80z" />
+                <path
+                  d="m332.68652 328 5.65674 5.65674a7.99945 7.99945 0 0 0 11.31348 0l16-16a7.99877 7.99877 0 0 0 2.34326-5.65674v-24a7.99977 7.99977 0 0 0 -8-8h-32a7.99977 7.99977 0 0 0 -8 8v24h-160v16zm3.31348-32h16v12.68652l-8 8-8-8z" />
+                <path d="m48 192h48v16h-48z" />
+                <path d="m48 224h32v16h-32z" />
+                <path d="m48 256h48v16h-48z" />
+                <path d="m80 288h32v16h-32z" />
+                <path d="m80 320h32v16h-32z" />
+                <path
+                  d="m210.66455 253.96094a8.00168 8.00168 0 0 0 6.21875 1.99023l72-8a7.99845 7.99845 0 0 0 4.77344-2.29443l29.65674-29.65674h19.24267l-6.44726 38.68457a7.99969 7.99969 0 0 0 4.31347 8.4707l16 8a8 8 0 0 0 10.93067-4.0039l20.14258-46.99951a33.75475 33.75475 0 0 0 -25.47608-46.59229l-17.37036-2.895 10.66483-10.66457h36.686a7.99948 7.99948 0 0 0 4.7998-1.6001l32-24a7.9996 7.9996 0 0 0 2.35547-9.97754l-8-16a7.99877 7.99877 0 0 0 -9.0957-4.18359l-29.49023 7.37256-25.2182-10.08716a23.96392 23.96392 0 0 0 .64886-5.52417v-27.05566a20.94358 20.94358 0 0 0 -30.31055-18.73291l-13.26709 6.6333a7.99924 7.99924 0 0 0 -4.42236 7.15527v24h-32a8.00164 8.00164 0 0 0 -2.97119.57227l-40 16a7.99975 7.99975 0 0 0 -5.02881 7.42773v16a7.99977 7.99977 0 0 0 8 8h45.75391l-5.36005 21.43921-22.33186 52.10718-44.5918 14.86425a8.00011 8.00011 0 0 0 -5.4702 7.58936v16a8.00089 8.00089 0 0 0 2.66455 5.96094zm162.64945-52.72022a17.73543 17.73543 0 0 1 -.52441 12.60791l-16.80078 39.20166-3.12647-1.56347 7.02881-42.17139a8.00034 8.00034 0 0 0 -7.89115-9.31543h-40.92871a20.1611 20.1611 0 0 1 -19.12647-26.53662l.96155-2.88464 32.12244 12.849a7.986 7.986 0 0 0 1.65729.45722l-.001.00616 32.7041 5.45069a17.7145 17.7145 0 0 1 13.9248 11.89891zm-21.314-57.24072a7.99877 7.99877 0 0 0 -5.65674 2.34326l-20.27 20.26953-28.61865-11.44726 6.30664-25.2251a8.0001 8.0001 0 0 0 -7.76125-9.94043h-8v-16h25.3761a23.97964 23.97964 0 0 0 37.033 11.17987l26.82165 10.72864 4.52291 18.09149zm-8-48a8 8 0 0 1 -16 0v-8h16zm69.85889 29.606-17.01984 12.76489-3.13751-12.55 18.01282-4.50348zm-77.01319-61.084a4.94339 4.94339 0 0 1 7.1543 4.42234v3.05566h-16v-3.05566zm-88.8457 52.8945 24-9.60022v12.18372h-24zm-24 120.34961 42.52979-14.17675a7.99955 7.99955 0 0 0 4.82324-4.438l8.81164-20.56055c.26654.43829.53235.877.81873 1.30664a36.07631 36.07631 0 0 0 20.894 14.91168l-17.54974 17.54975-60.32766 6.70312z" />
+              </svg>
+            </div>
+            <h2 class="st-iconbox-title">Motion Graphics</h2>
+            <div class="st-iconbox-text">Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.</div>
+          </div>
+          <div class="st-height-b0 st-height-lg-b30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4 col-md-6">
+          <div class="st-iconbox st-style1">
+            <div class="st-iconbox-icon">
+              <svg viewBox="0 0 512 512">
+                <g id="XMLID_1568_">
+                  <g id="XMLID_652_">
+                    <path id="XMLID_676_"
+                      d="m482 278h-37.673v-54c0-14.602-10.489-26.795-24.327-29.455v-104.529c0-19.859-16.157-36.016-36.017-36.016h-128.983c-5.522 0-10 4.477-10 10s4.478 10 10 10h128.983c8.832 0 16.017 7.185 16.017 16.016v103.984h-129.667c-16.542 0-30 13.458-30 30v63.228h-220.333v-197.212c0-8.831 7.185-16.016 16.017-16.016h128.983c5.522 0 10-4.477 10-10s-4.478-10-10-10h-128.983c-19.86 0-36.017 16.157-36.017 36.016v229.268c0 19.859 16.157 36.017 36.017 36.017h123.33v36.063c0 19.688-9.953 37.694-26.624 48.168-3.774 2.371-5.523 6.953-4.29 11.235 1.233 4.283 5.152 7.232 9.609 7.232h343.958c16.542 0 30-13.458 30-30v-119.999c0-16.542-13.458-30-30-30zm-211.667-64h143.994c5.514 0 10 4.486 10 10v54h-14.327c-16.542 0-30 13.458-30 30v120c0 3.506.61 6.87 1.72 10h-111.387c-5.514 0-10-4.486-10-10v-204c0-5.514 4.486-10 10-10zm-250.333 105.284v-12.057h220.333v28.073h-70.986-133.33c-8.832.001-16.017-7.184-16.017-16.016zm159.347 72.08v-36.063h60.986v72.699c0 3.506.61 6.87 1.72 10h-78.402c10.071-13.169 15.696-29.427 15.696-46.636zm312.653 36.636c0 5.514-4.486 10-10 10h-72c-5.514 0-10-4.486-10-10v-120c0-5.514 4.486-10 10-10h72c5.514 0 10 4.486 10 10z" />
+                    <path id="XMLID_1626_"
+                      d="m58 114.614c-5.522 0-10 4.477-10 10v112c0 5.523 4.478 10 10 10h88c5.522 0 10-4.477 10-10v-112c0-5.523-4.478-10-10-10zm78 112h-68v-92h68z" />
+                    <path id="XMLID_1627_"
+                      d="m194 134.614h101c5.522 0 10-4.477 10-10s-4.478-10-10-10h-101c-5.522 0-10 4.477-10 10s4.478 10 10 10z" />
+                    <path id="XMLID_1628_"
+                      d="m194 230.61c2.63 0 5.21-1.06 7.069-2.92 1.86-1.87 2.931-4.44 2.931-7.08 0-2.63-1.07-5.21-2.931-7.07-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.07-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.08c1.86 1.86 4.44 2.92 7.07 2.92z" />
+                    <path id="XMLID_1639_"
+                      d="m194 182.614h37.5c5.522 0 10-4.477 10-10s-4.478-10-10-10h-37.5c-5.522 0-10 4.477-10 10s4.478 10 10 10z" />
+                    <path id="XMLID_1674_"
+                      d="m446 398c-2.63 0-5.21 1.069-7.07 2.93s-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931s5.21-1.07 7.069-2.931c1.861-1.859 2.931-4.439 2.931-7.069s-1.07-5.21-2.931-7.07c-1.859-1.861-4.439-2.93-7.069-2.93z" />
+                    <path id="XMLID_1677_"
+                      d="m342.33 418c2.63 0 5.21-1.07 7.069-2.931 1.86-1.859 2.931-4.439 2.931-7.069s-1.07-5.21-2.931-7.07c-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.069-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.069c1.86 1.861 4.44 2.931 7.07 2.931z" />
+                    <path id="XMLID_1681_"
+                      d="m210 74c2.63 0 5.21-1.07 7.069-2.93 1.861-1.86 2.931-4.44 2.931-7.07s-1.07-5.21-2.931-7.07c-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.07-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.07 4.44 2.93 7.07 2.93z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h2 class="st-iconbox-title">Responsive Design</h2>
+            <div class="st-iconbox-text">Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.</div>
+          </div>
+          <div class="st-height-b0 st-height-lg-b30"></div>
+        </div><!-- .col -->
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Service Seciton -->
+
+  <!-- Start Skill Seciton -->
+  <section class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">MY SKILLS</h4>
+        <h2 class="st-section-heading-subtitle">MY SKILLS</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="st-skill-wrap">
+            <div class="st-skill-heading">
+              <h2 class="st-skill-title">All the skills that I have in that field
+                of work are mentioned.</h2>
+              <div class="st-skill-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                eos et accusam et justo duo dolores. <br><br>Stet clita kasd gubergren, no sea takimata
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt.
+              </div>
+            </div><!-- .st-skill-heading -->
+          </div>
+        </div>
+
+        <!-- Progressbar -->
+
+        <div class="col-lg-6">
+          <div class="st-height-b0 st-height-lg-b30"></div>
+          <div class="st-progressbar-wrap">
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">Photoshop</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.5s">95%</div>
+              </div>
+              <div class="st-progressbar" data-progress="95">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">Motion Graphic</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.5s">75%</div>
+              </div>
+              <div class="st-progressbar" data-progress="75">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">Adobe XD</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.5s">90%</div>
+              </div>
+              <div class="st-progressbar" data-progress="90">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">UX Design</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.5s">85%</div>
+              </div>
+              <div class="st-progressbar" data-progress="85">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">HTML</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.5s">80%</div>
+              </div>
+              <div class="st-progressbar" data-progress="80">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">Digital Marketing</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.5s">90%</div>
+              </div>
+              <div class="st-progressbar" data-progress="90">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skill Seciton -->
+
+  <!-- Start Resume Seciton -->
+  <section id="resume" class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">RESUME</h4>
+        <h2 class="st-section-heading-subtitle">RESUME</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Experience -->
+        <div class="col-lg-6">
+          <div class="st-resume-wrap">
+            <div class="st-resume-heading">
+              <img src="assets/img/icon/resume-icon1.png" alt="resume-icon">
+              <h2 class="st-resume-heading-title">Experience</h2>
+            </div>
+
+            <div class="st-height-b50 st-height-lg-b30"></div>
+
+            <div class="st-resume-timeline-wrap">
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Senior UX/UI Designer</h3>
+                <div class="st-resume-timeline-duration">Jan 2020 - Present</div>
+                <h4 class="st-resume-timeline-subtitle">Bergnaum, Hills and Howe</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+              <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Product Designer</h3>
+                <div class="st-resume-timeline-duration">Jan 2016 - December 2019</div>
+                <h4 class="st-resume-timeline-subtitle">Langosh, Sipes and Raynor</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+              <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">UI/UX Designer</h3>
+                <div class="st-resume-timeline-duration">Jan 2014 - December 2015</div>
+                <h4 class="st-resume-timeline-subtitle">Strosin, Maggio and Homenick</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="col-lg-6">
+
+          <div class="st-height-b0 st-height-lg-b50"></div>
+          <div class="st-resume-wrap">
+            <div class="st-resume-heading">
+              <img src="assets/img/icon/resume-icon2.png" alt="resume-icon">
+              <h2 class="st-resume-heading-title">Education</h2>
+            </div>
+            <div class="st-height-b50 st-height-lg-b30"></div>
+
+            <div class="st-resume-timeline-wrap">
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Master of Computer Science</h3>
+                <div class="st-resume-timeline-duration">2015 - 2016</div>
+                <h4 class="st-resume-timeline-subtitle">University of XYZ</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+              <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Bachelor of Computer Science</h3>
+                <div class="st-resume-timeline-duration">2010 - 2014</div>
+                <h4 class="st-resume-timeline-subtitle">University of ABC</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+              <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Diploma in Computer Science</h3>
+                <div class="st-resume-timeline-duration">2006 - 2010</div>
+                <h4 class="st-resume-timeline-subtitle">XYZ Institution</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Resume Seciton -->
+
+  <!-- Start Portfolio Seciton -->
+  <section id="portfolio">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">PORTFOLIOS</h4>
+        <h2 class="st-section-heading-subtitle">PORTFOLIOS</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio1_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio1.jpg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Product Design</h5>
+                  <p>Design / Marketing</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio2_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio2.jpg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Product Design</h5>
+                  <p>Design / Marketing</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio3_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio3.jpg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Product Design</h5>
+                  <p>Design / Marketing</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio4_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio4.jpg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Product Design</h5>
+                  <p>Design / Marketing</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio5_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio5.jpg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Product Design</h5>
+                  <p>Design / Marketing</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio6_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio6.jpg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Product Design</h5>
+                  <p>Design / Marketing</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 text-center">
+          <div class="st-portfolio-btn">
+            <a href="#" class="st-btn st-style1 st-color1">Load More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Portfolio Seciton -->
+
+  <!-- Start Review Seciton -->
+  <section class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">REVIEWS</h4>
+        <h2 class="st-section-heading-subtitle">REVIEWS</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <!-- Reviews Container -->
+
+    <div class="container">
+      <div class="st-slider st-style1 st-reviews-wrap">
+        <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+          data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3"
+          data-lg-slides="3" data-add-slides="3">
+          <div class="slick-wrapper">
+
+            <div class="slick-slide-in">
+              <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="st-testimonial-text">
+                  <p>“Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                    teimpor sittem elit inuning utsed sittem do eiusmod.”</p>
+                  <div class="st-quote"><img src="assets/img/icon/quote.png" alt="quote"></div>
+                </div>
+                <div class="st-testimonial-info">
+                  <div class="st-testimonial-img"><img src="assets/img/client/client1.png" alt="client1"></div>
+                  <div class="st-testimonial-meta">
+                    <h4 class="st-testimonial-name">Richard Miles</h4>
+                    <div class="st-testimonial-designation">Chairman</div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+
+            <div class="slick-slide-in">
+              <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="st-testimonial-text">
+                  <p>“Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                    teimpor sittem elit inuning utsed sittem do eiusmod.”</p>
+                  <div class="st-quote"><img src="assets/img/icon/quote.png" alt="quote"></div>
+                </div>
+                <div class="st-testimonial-info">
+                  <div class="st-testimonial-img"><img src="assets/img/client/client2.png" alt="client2"></div>
+                  <div class="st-testimonial-meta">
+                    <h4 class="st-testimonial-name">Vesta Shufelt</h4>
+                    <div class="st-testimonial-designation">Executive Director</div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+
+            <div class="slick-slide-in">
+              <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="st-testimonial-text">
+                  <p>“Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                    teimpor sittem elit inuning utsed sittem do eiusmod.”</p>
+                  <div class="st-quote"><img src="assets/img/icon/quote.png" alt="quote"></div>
+                </div>
+                <div class="st-testimonial-info">
+                  <div class="st-testimonial-img"><img src="assets/img/client/client3.png" alt="client3"></div>
+                  <div class="st-testimonial-meta">
+                    <h4 class="st-testimonial-name">Joseph Alves</h4>
+                    <div class="st-testimonial-designation">Managing Director</div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+
+            <div class="slick-slide-in">
+              <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="st-testimonial-text">
+                  <p>“Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                    teimpor sittem elit inuning utsed sittem do eiusmod.”</p>
+                  <div class="st-quote"><img src="assets/img/icon/quote.png" alt="quote"></div>
+                </div>
+                <div class="st-testimonial-info">
+                  <div class="st-testimonial-img"><img src="assets/img/client/client1.png" alt="client1"></div>
+                  <div class="st-testimonial-meta">
+                    <h4 class="st-testimonial-name">Richard Miles</h4>
+                    <div class="st-testimonial-designation">Chairman</div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+
+            <div class="slick-slide-in">
+              <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="st-testimonial-text">
+                  <p>“Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                    teimpor sittem elit inuning utsed sittem do eiusmod.”</p>
+                  <div class="st-quote"><img src="assets/img/icon/quote.png" alt="quote"></div>
+                </div>
+                <div class="st-testimonial-info">
+                  <div class="st-testimonial-img"><img src="assets/img/client/client2.png" alt="client2"></div>
+                  <div class="st-testimonial-meta">
+                    <h4 class="st-testimonial-name">Vesta Shufelt</h4>
+                    <div class="st-testimonial-designation">Executive Director</div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+
+            <div class="slick-slide-in">
+              <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="st-testimonial-text">
+                  <p>“Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                    teimpor sittem elit inuning utsed sittem do eiusmod.”</p>
+                  <div class="st-quote"><img src="assets/img/icon/quote.png" alt="quote"></div>
+                </div>
+                <div class="st-testimonial-info">
+                  <div class="st-testimonial-img"><img src="assets/img/client/client3.png" alt="client3"></div>
+                  <div class="st-testimonial-meta">
+                    <h4 class="st-testimonial-name">Joseph Alves</h4>
+                    <div class="st-testimonial-designation">Managing Director</div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+          </div>
+        </div><!-- .slick-container -->
+        <div class="pagination st-style1 st-flex st-hidden"></div>
+        <!-- If dont need Pagination then add class .st-hidden -->
+        <div class="swipe-arrow st-style1 st-hidden">
+          <!-- If dont need navigation then add class .st-hidden -->
+          <div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
+          <div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
+        </div>
+      </div><!-- .st-slider -->
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Review Seciton -->
+
+  <!-- Start Blog Seciton -->
+  <section id="blog">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">BLOG</h4>
+        <h2 class="st-section-heading-subtitle">LATEST NEWS</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <!-- Latest News Container -->
+
+    <div class="container">
+      <div class="st-slider st-style2">
+        <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+          data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3"
+          data-lg-slides="3" data-add-slides="3">
+          <div class="slick-wrapper">
+            <div class="slick-slide-in">
+              <div class="st-post-single st-style1">
+                <a href="blog-details.html" class="st-post-thumb st-zoom">
+                  <img src="assets/img/blog/blog1.jpg" class="st-zoom-in" alt="blog1">
+                </a>
+                <div class="st-post-info">
+                  <div class="st-post-date">
+                    By:
+                    <a href="#" class="st-post-author">Admin</a>
+                    <span class="st-post-date-divider">|</span>
+                    <span class="st-post-publish-date">27-09-2020</span>
+                  </div>
+                  <h4 class="st-post-title"><a href="blog-details.html">What are the latest trends in Graphic design according to you?</a></h4>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+            <div class="slick-slide-in">
+              <div class="st-post-single st-style1">
+                <a href="blog-details.html" class="st-post-thumb st-zoom">
+                  <img src="assets/img/blog/blog2.jpg" class="st-zoom-in" alt="blog2">
+                </a>
+                <div class="st-post-info">
+                  <div class="st-post-date">
+                    By:
+                    <a href="#" class="st-post-author">Admin</a>
+                    <span class="st-post-date-divider">|</span>
+                    <span class="st-post-publish-date">27-09-2020</span>
+                  </div>
+                  <h4 class="st-post-title"><a href="blog-details.html">What do you think makes someone a good designer?</a></h4>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+            <div class="slick-slide-in">
+              <div class="st-post-single st-style1">
+                <a href="blog-details.html" class="st-post-thumb st-zoom">
+                  <img src="assets/img/blog/blog3.jpg" class="st-zoom-in" alt="blog3">
+                </a>
+                <div class="st-post-info">
+                  <div class="st-post-date">
+                    By:
+                    <a href="#" class="st-post-author">Admin</a>
+                    <span class="st-post-date-divider">|</span>
+                    <span class="st-post-publish-date">27-09-2020</span>
+                  </div>
+                  <h4 class="st-post-title"><a href="blog-details.html">Were there any mistakes you’ve made as a designer</a></h4>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+            <div class="slick-slide-in">
+              <div class="st-post-single st-style1">
+                <a href="blog-details.html" class="st-post-thumb st-zoom">
+                  <img src="assets/img/blog/blog1.jpg" class="st-zoom-in" alt="blog1">
+                </a>
+                <div class="st-post-info">
+                  <div class="st-post-date">
+                    By:
+                    <a href="#" class="st-post-author">Admin</a>
+                    <span class="st-post-date-divider">|</span>
+                    <span class="st-post-publish-date">27-09-2020</span>
+                  </div>
+                  <h4 class="st-post-title"><a href="blog-details.html">What are the latest trends in Graphic design according to you?</a></h4>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+            <div class="slick-slide-in">
+              <div class="st-post-single st-style1">
+                <a href="blog-details.html" class="st-post-thumb st-zoom">
+                  <img src="assets/img/blog/blog2.jpg" class="st-zoom-in" alt="blog2">
+                </a>
+                <div class="st-post-info">
+                  <div class="st-post-date">
+                    By:
+                    <a href="#" class="st-post-author">Admin</a>
+                    <span class="st-post-date-divider">|</span>
+                    <span class="st-post-publish-date">27-09-2020</span>
+                  </div>
+                  <h4 class="st-post-title"><a href="blog-details.html">What do you think makes someone a good designer?</a></h4>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+            <div class="slick-slide-in">
+              <div class="st-post-single st-style1">
+                <a href="blog-details.html" class="st-post-thumb st-zoom">
+                  <img src="assets/img/blog/blog3.jpg" class="st-zoom-in" alt="blog3">
+                </a>
+                <div class="st-post-info">
+                  <div class="st-post-date">
+                    By:
+                    <a href="#" class="st-post-author">Admin</a>
+                    <span class="st-post-date-divider">|</span>
+                    <span class="st-post-publish-date">27-09-2020</span>
+                  </div>
+                  <h4 class="st-post-title"><a href="blog-details.html">Were there any mistakes you’ve made as a designer</a></h4>
+                </div>
+              </div>
+            </div><!-- .slick-slide-in -->
+          </div>
+        </div><!-- .slick-container -->
+        <div class="pagination st-style1 st-flex st-hidden"></div>
+        <!-- If dont need Pagination then add class .st-hidden -->
+      </div><!-- .st-slider -->
+    </div>
+    <div class="st-height-b95 st-height-lg-b75"></div>
+  </section>
+  <!-- End Blog Seciton -->
+
+  <!-- Start Contact Seciton -->
+  <section id="contact" class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">CONTACT ME</h4>
+        <h2 class="st-section-heading-subtitle">CONTACT ME</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <!-- Contact Container -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="st-contact-title">Just say Hello</h3>
+          <div id="st-alert"></div>
+          <form action="#" method="POST" class="st-contact-form" id="contact-form">
+            <div class="st-form-field">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="st-form-field">
+              <input type="text" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="st-form-field">
+              <input type="text" id="subject" name="subject" placeholder="Your Subject" required>
+            </div>
+            <div class="st-form-field">
+              <textarea cols="30" rows="10" id="msg" name="msg" placeholder="Your Message" required></textarea>
+            </div>
+            <button class="st-btn st-style1 st-color1" type="submit" id="submit" name="submit">Send message</button>
+          </form>
+        </div>
+        <div class="st-height-b0 st-height-lg-b30"></div>
+
+        <div class="col-lg-6">
+          <div class="st-height-b0 st-height-lg-b40"></div>
+          <h3 class="st-contact-title">Contact Info</h3>
+          <div class="st-contact-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla tincidunt id faucibus sed
+            suscipit feugiat.
+          </div>
+          <div class="st-contact-info-wrap">
+            <div class="st-single-contact-info">
+              <i class="fas fa-envelope"></i>
+              <div class="st-single-info-details">
+                <h4>Email</h4>
+                <a href="#">devis@example.com</a>
+                <a href="#">info@support.com</a>
+              </div>
+            </div>
+            <div class="st-single-contact-info">
+              <i class="fas fa-phone-alt"></i>
+              <div class="st-single-info-details">
+                <h4>Phone</h4>
+                <span>+1 876-369-9009</span>
+                <span>+1 213-519-1786</span>
+              </div>
+            </div>
+            <div class="st-single-contact-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="st-single-info-details">
+                <h4>Address</h4>
+                <span>2661 High Meadow Lane Bear Creek, <br>Olancha, KY 93544</span>
+              </div>
+            </div>
+            <div class="st-social-info">
+              <div class="st-social-text">Visite my social profile and get connected</div>
+              <div class="st-social-link">
+                <a href="#" class="st-social-btn active">
+                  <span class="st-social-icon"><i class="fab fa-dribbble"></i></span>
+                  <span class="st-icon-name">Dribbble</span>
+                </a>
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon"><i class="fab fa-behance"></i></span>
+                  <span class="st-icon-name">Behance</span>
+                </a>
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon"><i class="fab fa-twitter"></i></span>
+                  <span class="st-icon-name">Twitter</span>
+                </a>
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon"><i class="fab fa-linkedin"></i></span>
+                  <span class="st-icon-name">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Contact Seciton -->
+
+  <!-- Start Footer Seciton -->
+  <footer>
+    <div class="container">
+      <div class="st-copyright-wrap text-center">
+        <div class="st-copyright-text">© 2022. CriXus Developer.</div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Seciton -->
+
+  <!-- Scripts -->
+  <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+  <script src="{{ asset('assets/js/jquery.slick.min.js') }}"></script>
+  <script src="{{ asset('assets/js/lightgallery.min.js') }}"></script>
+  <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+  <script src="{{ asset('assets/js/particles.min.js') }}"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+</body>
 </html>
