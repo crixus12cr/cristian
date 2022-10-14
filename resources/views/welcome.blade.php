@@ -27,7 +27,7 @@
       <div class="container">
         <div class="st-main-header-in">
           <div class="st-main-header-left">
-            <div class="st-header-author"><img src="assets/img/section/hero-img.jpg" alt=""></div>
+            <div class="st-header-author"><img src="assets/img/cristianPer.jpg" alt=""></div>
           </div>
           <div class="st-main-header-right">
             <div class="st-nav">
@@ -55,15 +55,15 @@
     <div class="container">
       <div class="st-hero-text">
         <h1>Hola, Soy <span>Cristian Perdomo</span></h1>
-        <p>Soy desarrollador backend . <br>I also make website more & more interactive with web animations.</p>
+        <p>Desarrollador de software Backend . Tengo capacidad <br> de crear paginas web y diseño de base de datos,  Me <br> gusta estar en constante aprendizaje. Cuento con gran <br> interes en aprender ingles y en el desarrollo fullstack.</p>
         <div class="st-hero-social-links">
-          <a href="#" class="st-social-btn">
+          <a href="https://www.facebook.com/cristianstiven.perdomogarcia" target="_blank" rel="noopener noreferrer" class="st-social-btn">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="st-social-btn">
+          <a href="https://www.linkedin.com/in/cristian-perdomo-b9346a227/" target="_blank" rel="noopener noreferrer" class="st-social-btn">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="#" class="st-social-btn">
+          <a href="https://github.com/crixus12cr" target="_blank" rel="noopener noreferrer" class="st-social-btn">
             <i class="fab fa-github"></i>
           </a>
         </div>
@@ -99,7 +99,7 @@
       <div class="row">
         <div class="col-lg-6 wow fadeInLeft">
           <div class="st-about-img-wrap">
-            <div class="st-about-img st-dynamic-bg st-bg" data-src="assets/img/section/about.jpg"></div>
+            <div class="st-about-img st-dynamic-bg st-bg" data-src="assets/img/cristian.jpeg"></div>
           </div>
           <div class="st-height-b0 st-height-lg-b30"></div>
         </div>
@@ -116,7 +116,7 @@
                   <li><span>Telefono</span> : <span><a href="https://api.whatsapp.com/send?phone=573125620823&text=Hola%20Quiero%20Comunicarme%20Contigo" style="list-style: none;color:#A9ADB8; cursor:pointer;" target="_blank" rel="noopener noreferrer"">+57 3125620823</a></span></li>
                   <li><span>Email</span> : <span>cristian2020til@gmail.com</span></li>
                   <li><span>Pais</span> : <span>Colombia</span></li>
-                  <li><span>Idiomas</span> : <span>Español (nativo), Ingles (tecnico)</span></li>
+                  <li><span>Idiomas</span> : <span>Español (nativo), Ingles (técnico)</span></li>
                   <li><span>Freelance</span> : <span>Available</span></li>
                 </ul>
                 <div class="st-text-block-btn">
@@ -132,12 +132,12 @@
   <!-- End About Seciton -->
 
   <!-- Start Service Seciton -->
-  <section>
+  {{-- <section>
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">SERVICES</h4>
-        <h2 class="st-section-heading-subtitle">SERVICES</h2>
+        <h4 class="st-section-heading-title">SERVICIOS</h4>
+      <h2 class="st-section-heading-subtitle">SERVICIOS</h2>
       </div>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
@@ -367,7 +367,7 @@
       </div>
     </div>
     <div class="st-height-b100 st-height-lg-b80"></div>
-  </section>
+  </section> --}}
   <!-- End Service Seciton -->
 
   <!-- Start Skill Seciton -->
@@ -386,8 +386,7 @@
         <div class="col-lg-6">
           <div class="st-skill-wrap">
             <div class="st-skill-heading">
-              <h2 class="st-skill-title">All the skills that I have in that field
-                of work are mentioned.</h2>
+              <h2 class="st-skill-title">HABILIDADES QUE DOMINO Y CON LAS QUE HE TRABAJADO.</h2>
               <div class="st-skill-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                 nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
                 eos et accusam et justo duo dolores. <br><br>Stet clita kasd gubergren, no sea takimata
@@ -701,7 +700,7 @@
   <!-- End Portfolio Seciton -->
 
   <!-- Start Review Seciton -->
-  <section class="st-dark-bg">
+  {{-- <section class="st-dark-bg">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
@@ -833,7 +832,7 @@
       </div><!-- .st-slider -->
     </div>
     <div class="st-height-b100 st-height-lg-b80"></div>
-  </section>
+  </section> --}}
   <!-- End Review Seciton -->
 
   <!-- Start Blog Seciton -->
