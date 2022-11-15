@@ -99,7 +99,7 @@
       <div class="row">
         <div class="col-lg-6 wow fadeInLeft">
           <div class="st-about-img-wrap">
-            <div class="st-about-img st-dynamic-bg st-bg" data-src="assets/img/cristian.jpeg"></div>
+            <div class="st-about-img st-dynamic-bg st-bg" data-src="assets/img/cristian.jpg"></div>
           </div>
           <div class="st-height-b0 st-height-lg-b30"></div>
         </div>
@@ -1000,10 +1000,9 @@
 
         <div class="col-lg-6">
           <div class="st-height-b0 st-height-lg-b40"></div>
-          <h3 class="st-contact-title">Contact Info</h3>
+          <h3 class="st-contact-title">Puedes contactarme</h3>
           <div class="st-contact-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla tincidunt id faucibus sed
-            suscipit feugiat.
+
           </div>
           <div class="st-contact-info-wrap">
             <div class="st-single-contact-info">
@@ -1017,16 +1016,15 @@
             <div class="st-single-contact-info">
               <i class="fas fa-phone-alt"></i>
               <div class="st-single-info-details">
-                <h4>Phone</h4>
-                <span>+1 876-369-9009</span>
-                <span>+1 213-519-1786</span>
+                <h4>Telefono</h4>
+                <span>+57 3125620823</span>
               </div>
             </div>
             <div class="st-single-contact-info">
               <i class="fas fa-map-marker-alt"></i>
               <div class="st-single-info-details">
-                <h4>Address</h4>
-                <span>2661 High Meadow Lane Bear Creek, <br>Olancha, KY 93544</span>
+                <h4>Direccion</h4>
+                <span>Colombia, <br>Neiva - Huila</span>
               </div>
             </div>
             <div class="st-social-info">
