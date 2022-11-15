@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::post('contactanos', function () {
+
+    $correoRemitente = new ContactanosMailable;
+    /* destino */
+    Mail::to('cristian2020til@gmail.com')->send($correoRemitente);
 });

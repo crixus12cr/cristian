@@ -978,7 +978,7 @@
         <div class="col-lg-6">
           <h3 class="st-contact-title">Mandame un Correo</h3>
           <div id="st-alert"></div>
-          <form action="#" method="POST" class="st-contact-form" id="contact-form">
+          <form action="contactanos" method="POST" class="st-contact-form" id="contact-form">
             <div class="st-form-field">
               <input type="text" id="name" name="name" placeholder="Tu nombre" required>
             </div>
@@ -1002,22 +1002,22 @@
           <div class="st-height-b0 st-height-lg-b40"></div>
           <h3 class="st-contact-title">Puedes contactarme</h3>
           <div class="st-contact-text">
-
+            ¡Escribeme un mensaje! y te estaré ayudando en lo que requieras.
           </div>
           <div class="st-contact-info-wrap">
             <div class="st-single-contact-info">
               <i class="fas fa-envelope"></i>
               <div class="st-single-info-details">
                 <h4>Email</h4>
-                <a href="#">cristian2020til@gmail.com</a>
-                <a href="#">cristianstiven1209@outlook.com</a>
+                <a {{-- href="#" --}}>cristian2020til@gmail.com</a>
+                <a {{-- href="#" --}}>cristianstiven1209@outlook.com</a>
               </div>
             </div>
             <div class="st-single-contact-info">
               <i class="fas fa-phone-alt"></i>
               <div class="st-single-info-details">
                 <h4>Telefono</h4>
-                <span>+57 3125620823</span>
+                <span><a href="https://api.whatsapp.com/send?phone=573125620823&text=Hola%20Quiero%20Comunicarme%20Contigo" style="list-style: none;color:#A9ADB8; cursor:pointer;" target="_blank" rel="noopener noreferrer"">+57 3125620823</a></span>
               </div>
             </div>
             <div class="st-single-contact-info">
