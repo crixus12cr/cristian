@@ -273,7 +273,7 @@
 
   /*--------------------------------------------------------------
     10. Slick Slider
-  --------------------------------------------------------------*/ 
+  --------------------------------------------------------------*/
   function slickInit() {
     $('.st-slider').each(function () {
       // Slick Variable
@@ -358,7 +358,7 @@
   }
   /*--------------------------------------------------------------
     11. particles
-  --------------------------------------------------------------*/ 
+  --------------------------------------------------------------*/
   function particles() {
     if ($.exists('#particles-js')) {
       particlesJS("particles-js", {
@@ -515,3 +515,13 @@
     });
   }
 })(jQuery); // End of use strict
+/* ---------------- */
+
+
+function updateYear() {
+    var date = new Date();
+    var year = date.getFullYear();
+    document.getElementById("year").innerHTML = year;
+  }
+
+  updateYear();

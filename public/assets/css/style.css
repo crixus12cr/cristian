@@ -3041,3 +3041,16 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
 }
+
+/* #download-button {
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */

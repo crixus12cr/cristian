@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormularioController;
 use Illuminate\Support\Facades\Route;
 
 use App\Mail\ContactanosMailable;
@@ -16,12 +17,9 @@ use Illuminate\Support\Facades\Mail;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('portfolio');
 });
 
-Route::post('contactanos', function () {
+Route::get('/descargar-cv', [FormularioController::class,'descargar_cv']);
 
-    $correoRemitente = new ContactanosMailable;
-    /* destino */
-    Mail::to('cristian2020til@gmail.com')->send($correoRemitente);
-});
+Route::post('contactanos', [FormularioController::class, 'sendContactForm']);

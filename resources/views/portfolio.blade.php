@@ -18,9 +18,48 @@
   <link rel="stylesheet" href="{{ asset('assets/css/lightgallery.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+  {{-- <style>
+    .imagenes {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      width: 25%;
+      padding: 8px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      td {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      td {
+        width: 100%;
+      }
+    }
+  </style> --}}
 </head>
 
 <body id="home" class="st-get-sidebar">
+    @if(session('mensaje'))
+    <div class="alert alert-success" id="mensaje-flash">
+        {{ session('mensaje') }}
+    </div>
+    @endif
   <!-- Start Header Section -->
   <header class="st-site-header st-style2 st-sticky-header">
     <div class="st-main-header">
@@ -36,7 +75,7 @@
                 <li><a href="#about" class="st-smooth-move">Sobre mi</a></li>
                 <li><a href="#resume" class="st-smooth-move">Educacion & Experiencia</a></li>
                 <li><a href="#portfolio" class="st-smooth-move">Portafolio</a></li>
-                <li><a href="#blog" class="st-smooth-move">Blog</a></li>
+                {{-- <li><a href="#blog" class="st-smooth-move">Blog</a></li> --}}
                 <li><a href="#contact" class="st-smooth-move">Contacto</a></li>
               </ul>
               {{-- <div class="st-hero-btn">
@@ -55,7 +94,7 @@
     <div class="container">
       <div class="st-hero-text">
         <h1>Hola, Soy <span>Cristian Perdomo</span></h1>
-        <p>Desarrollador de software Backend . Tengo capacidad <br> de crear paginas web y diseño de base de datos,  Me <br> gusta estar en constante aprendizaje. Cuento con gran <br> interes en aprender ingles y en el desarrollo fullstack.</p>
+        <p>Desarrollador de software Backend . Tengo capacidad de crear<br> paginas web y diseño e implementacion de base de datos,  Me <br> gusta estar en constante aprendizaje. Cuento con gran <br> interes en aprender ingles y en el desarrollo fullstack.</p>
         <div class="st-hero-social-links">
           <a href="https://www.facebook.com/cristianstiven.perdomogarcia" target="_blank" rel="noopener noreferrer" class="st-social-btn">
             <i class="fab fa-facebook-f"></i>
@@ -108,19 +147,19 @@
             <div class="st-vertical-middle-in">
               <div class="st-text-block st-style1">
                 <h2 class="st-text-block-title">¡Hola! Soy Cristian Perdomo</h2>
-                <h4 class="st-text-block-subtitle">Desarrollador Backend laravel</h4>
+                <h4 class="st-text-block-subtitle">Desarrollador Backend </h4>
                 <div class="st-text-block-text">
                   <p>Soy apasionado a la tecnología y sus procesos, entre estos incluido el aprendizaje y la arquitectura del software. Me destaco por ser proactivo y autodidacta, todo esto llevado de la mano con una de mis frases favoritas: “La creatividad es la inteligencia divirtiéndose” . Albert Einstein</p>
                 </div>
                 <ul class="st-text-block-details st-mp0">
                   <li><span>Telefono</span> : <span><a href="https://api.whatsapp.com/send?phone=573125620823&text=Hola%20Quiero%20Comunicarme%20Contigo" style="list-style: none;color:#A9ADB8; cursor:pointer;" target="_blank" rel="noopener noreferrer"">+57 3125620823</a></span></li>
-                  <li><span>Email</span> : <span>cristian2020til@gmail.com</span></li>
+                  <li><span>Email</span> : <span><a href="mailto:cristian2020til@gmail.com">cristian2020til@gmail.com</a></span></li>
                   <li><span>Pais</span> : <span>Colombia</span></li>
                   <li><span>Idiomas</span> : <span>Español (nativo), Ingles (técnico)</span></li>
-                  <li><span>Freelance</span> : <span>Available</span></li>
+                  {{-- <li><span>Freelance</span> : <span>Available</span></li> --}}
                 </ul>
                 <div class="st-text-block-btn">
-                  <a href="#" class="st-btn st-style1 st-color1">Descargar CV</a>
+                  <a id="download-button" href="{{ url('/descargar-cv') }}" class="st-btn st-style1 st-color1">Descargar CV</a>
                 </div>
               </div>
             </div>
@@ -384,90 +423,72 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <div class="st-skill-wrap">
-            <div class="st-skill-heading">
-              <h2 class="st-skill-title">HABILIDADES QUE DOMINO Y CON LAS QUE HE TRABAJADO.</h2>
-              <div class="st-skill-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores. <br><br>Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt.
-              </div>
-            </div><!-- .st-skill-heading -->
+            <div class="st-skill-wrap">
+              <div class="st-skill-heading">
+                <h2 class="st-skill-title">HABILIDADES QUE HE TRABAJADO.</h2>
+                <div class="st-skill-subtitle">
+                  <div class="imagenes">
+                    <div class="table-responsive">
+                      <table>
+                        <tr>
+                            <td><img src="{{ asset('assets/img/habilidades/php.png') }}" class="img-fluid" height="312" width="312"></td>
+                            <td><img src="{{ asset('assets/img/habilidades/laravel.png') }}" class="img-fluid" height="312" width="312"></td>
+                            <td><img src="{{ asset('assets/img/habilidades/javascript.png') }}" class="img-fluid" height="312" width="312"></td>
+                            <td><img src="{{ asset('assets/img/habilidades/piton.png') }}" class="img-fluid" height="312" width="312"></td>
+                        </tr>
+                        <tr>
+                          <td><img src="{{ asset('assets/img/habilidades/java.png') }}" class="img-fluid" height="312" width="312"></td>
+                          <td><img src="{{ asset('assets/img/habilidades/git.png') }}" class="img-fluid" height="312" width="312"></td>
+                          <td><img src="{{ asset('assets/img/habilidades/github.png') }}" class="img-fluid" height="312" width="312"></td>
+                          <td><img src="{{ asset('assets/img/habilidades/sql.png') }}" class="img-fluid" height="312" width="312"></td>
+                        </tr>
+                        <tr>
+                          <td><img src="{{ asset('assets/img/habilidades/mysql.png') }}" class="img-fluid" height="312" width="312"></td>
+                          <td><img src="{{ asset('assets/img/habilidades/postgre.png') }}" class="img-fluid" height="312" width="312"></td>
+                          <td><img src="{{ asset('assets/img/habilidades/html.png') }}" class="img-fluid" height="312" width="312"></td>
+                          <td><img src="{{ asset('assets/img/habilidades/css.png') }}" class="img-fluid" height="312" width="312"></td>
+                        </tr>
+                        <!-- Agrega tantas filas como sean necesarias -->
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- .st-skill-heading -->
+            </div>
           </div>
-        </div>
+
 
         <!-- Progressbar -->
 
         <div class="col-lg-6">
-          <div class="st-height-b0 st-height-lg-b30"></div>
-          <div class="st-progressbar-wrap">
-            <div class="st-single-progressbar">
-              <div class="st-progressbar-heading">
-                <h3 class="st-progressbar-title">Photoshop</h3>
-                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
-                    data-wow-delay="0.5s">95%</div>
-              </div>
-              <div class="st-progressbar" data-progress="95">
-                <div class="st-progressbar-in wow fadeInLeft"></div>
-              </div>
-            </div><!-- .st-single-progressbar -->
-            <div class="st-height-b30 st-height-lg-b20"></div>
-            <div class="st-single-progressbar">
-              <div class="st-progressbar-heading">
-                <h3 class="st-progressbar-title">Motion Graphic</h3>
-                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
-                    data-wow-delay="0.5s">75%</div>
-              </div>
-              <div class="st-progressbar" data-progress="75">
-                <div class="st-progressbar-in wow fadeInLeft"></div>
-              </div>
-            </div><!-- .st-single-progressbar -->
-            <div class="st-height-b30 st-height-lg-b20"></div>
-            <div class="st-single-progressbar">
-              <div class="st-progressbar-heading">
-                <h3 class="st-progressbar-title">Adobe XD</h3>
-                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
-                    data-wow-delay="0.5s">90%</div>
-              </div>
-              <div class="st-progressbar" data-progress="90">
-                <div class="st-progressbar-in wow fadeInLeft"></div>
-              </div>
-            </div><!-- .st-single-progressbar -->
-            <div class="st-height-b30 st-height-lg-b20"></div>
-            <div class="st-single-progressbar">
-              <div class="st-progressbar-heading">
-                <h3 class="st-progressbar-title">UX Design</h3>
-                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
-                    data-wow-delay="0.5s">85%</div>
-              </div>
-              <div class="st-progressbar" data-progress="85">
-                <div class="st-progressbar-in wow fadeInLeft"></div>
-              </div>
-            </div><!-- .st-single-progressbar -->
-            <div class="st-height-b30 st-height-lg-b20"></div>
-            <div class="st-single-progressbar">
-              <div class="st-progressbar-heading">
-                <h3 class="st-progressbar-title">HTML</h3>
-                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
-                    data-wow-delay="0.5s">80%</div>
-              </div>
-              <div class="st-progressbar" data-progress="80">
-                <div class="st-progressbar-in wow fadeInLeft"></div>
-              </div>
-            </div><!-- .st-single-progressbar -->
-            <div class="st-height-b30 st-height-lg-b20"></div>
-            <div class="st-single-progressbar">
-              <div class="st-progressbar-heading">
-                <h3 class="st-progressbar-title">Digital Marketing</h3>
-                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
-                    data-wow-delay="0.5s">90%</div>
-              </div>
-              <div class="st-progressbar" data-progress="90">
-                <div class="st-progressbar-in wow fadeInLeft"></div>
-              </div>
-            </div><!-- .st-single-progressbar -->
-          </div>
+            <div class="st-height-b0 st-height-lg-b30"></div>
+            <div class="st-progressbar-wrap">
+                <div class="st-skill-heading">
+                    <h2 class="st-skill-title">HABILIDADES EN DESARROLLO</h2>
+                    <div class="st-skill-subtitle">
+                        <div class="imagenes">
+                            <div class="table-responsive">
+                              <table>
+                                <tr>
+                                    <td><img src="{{ asset('assets/img/habilidades/node-js.png') }}" class="img-fluid" height="312" width="312"></td>
+                                    <td><img src="{{ asset('assets/img/habilidades/vue.png') }}" class="img-fluid" height="312" width="312"></td>
+                                    <td><img src="{{ asset('assets/img/habilidades/linux.png') }}" class="img-fluid" height="312" width="312"></td>
+                                    <td><img src="{{ asset('assets/img/habilidades/docker.png') }}" class="img-fluid" height="312" width="312"></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="{{ asset('assets/img/habilidades/dart.png') }}" class="img-fluid" height="312" width="312"></td>
+                                    <td><img src="{{ asset('assets/img/habilidades/flutter.png') }}" class="img-fluid" height="312" width="312"></td>
+                                    <td><img src="{{ asset('assets/img/habilidades/DigitalOcean-Logo.wine.png') }}" class="img-fluid" height="312" width="312"></td>
+                                </tr>
+                                <!-- Agrega tantas filas como sean necesarias -->
+                              </table>
+                            </div>
+                          </div>
+                    </div>
+                  </div><!-- .st-skill-heading -->
+                </div>
+             </div><!-- .st-single-progressbar -->
+            </div>
         </div>
       </div>
     </div>
@@ -498,34 +519,36 @@
 
             <div class="st-resume-timeline-wrap">
               <div class="st-resume-timeline">
-                <h3 class="st-resume-timeline-title">Senior UX/UI Designer</h3>
-                <div class="st-resume-timeline-duration">Jan 2020 - Present</div>
-                <h4 class="st-resume-timeline-subtitle">Bergnaum, Hills and Howe</h4>
+                <h3 class="st-resume-timeline-title">Desarrollador Backend JR</h3>
+                <div class="st-resume-timeline-duration">Enero 2022 - Actual</div>
+                <h4 class="st-resume-timeline-subtitle">Cootranshuila LTDA</h4>
                 <div class="st-resume-timeline-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                    <p>Creación endpoinst y apis para la interacción del backend con el frontend.</p>
+                    <p>Diseñe e implemente la base de datos para el proceso de una encomienda con sus estados respectivos hasta sus despachos y su
+                    entrega al cliente.</p>
+                    <p>Desarrolle el sistema de área de encomiendas de la empresa de transporte.</p>
+                    <p>Implemente un sistema de seguridad con middlewares y json web tokens (jwt) para uno de los sistemas
+                        administrativos.
+                    </p>
+                    <p>Desarrolle un sistema de mensajería donde se avisa a los jefes de rodamiento que documentos tiene por vencer un
+                        vehiculo.</p>
+                    <p>Desarrolle un proceso en donde se consultaban los movimientos de caja y se generaba un archivo plano que se sube a
+                        otro software contable en donde se lleva el registro de cada movimiento hecho en el sistema y se contabiliza.</p>
                 </div>
               </div> <!-- st-resume-timeline -->
               <div class="st-height-b50 st-height-lg-b30"></div>
               <div class="st-resume-timeline">
-                <h3 class="st-resume-timeline-title">Product Designer</h3>
-                <div class="st-resume-timeline-duration">Jan 2016 - December 2019</div>
-                <h4 class="st-resume-timeline-subtitle">Langosh, Sipes and Raynor</h4>
+                <h3 class="st-resume-timeline-title">Desarrollador Backend Freelance</h3>
+                <div class="st-resume-timeline-duration">Agosto 2022 - Diciembre 2022</div>
+                <h4 class="st-resume-timeline-subtitle">Gestional Recon</h4>
                 <div class="st-resume-timeline-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                  <p>Diseñe y desarrolle parte de la base de datos para el guardado y procesamiento de formularios que manejaba la empresa</p>
+                  <p>Implemente al proyecto spatie de laravel para el manejo de roles y permisos</p>
+                  <p>Implemente la libreria de Laravel Excel para descargas e importaciones de la base de datos.</p>
+                  <p>Creacion de endpoints para la api del proyecto.</p>
                 </div>
               </div> <!-- st-resume-timeline -->
-              <div class="st-height-b50 st-height-lg-b30"></div>
-              <div class="st-resume-timeline">
-                <h3 class="st-resume-timeline-title">UI/UX Designer</h3>
-                <div class="st-resume-timeline-duration">Jan 2014 - December 2015</div>
-                <h4 class="st-resume-timeline-subtitle">Strosin, Maggio and Homenick</h4>
-                <div class="st-resume-timeline-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
-                </div>
-              </div> <!-- st-resume-timeline -->
+
             </div>
           </div>
         </div>
@@ -543,25 +566,25 @@
 
             <div class="st-resume-timeline-wrap">
               <div class="st-resume-timeline">
-                <h3 class="st-resume-timeline-title">Master of Computer Science</h3>
-                <div class="st-resume-timeline-duration">2015 - 2016</div>
-                <h4 class="st-resume-timeline-subtitle">University of XYZ</h4>
-                <div class="st-resume-timeline-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
-                </div>
+                <h3 class="st-resume-timeline-title">Tecnologo en desarrollo de software</h3>
+                <div class="st-resume-timeline-duration">2020 - 2022</div>
+                <h4 class="st-resume-timeline-subtitle">Universidad Surcolombiana</h4>
+                {{-- <div class="st-resume-timeline-text">
+                  <p>Estudio.</p>
+                </div> --}}
               </div> <!-- st-resume-timeline -->
               <div class="st-height-b50 st-height-lg-b30"></div>
               <div class="st-resume-timeline">
-                <h3 class="st-resume-timeline-title">Bachelor of Computer Science</h3>
-                <div class="st-resume-timeline-duration">2010 - 2014</div>
-                <h4 class="st-resume-timeline-subtitle">University of ABC</h4>
-                <div class="st-resume-timeline-text">
+                <h3 class="st-resume-timeline-title">Programacion y desarrollo web</h3>
+                <div class="st-resume-timeline-duration">2020 - 2021</div>
+                <h4 class="st-resume-timeline-subtitle">Universidad Pontificia Bolivariana (Mision Tic)
+                </h4>
+                {{-- <div class="st-resume-timeline-text">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
-                </div>
+                </div> --}}
               </div> <!-- st-resume-timeline -->
-              <div class="st-height-b50 st-height-lg-b30"></div>
+              {{-- <div class="st-height-b50 st-height-lg-b30"></div>
               <div class="st-resume-timeline">
                 <h3 class="st-resume-timeline-title">Diploma in Computer Science</h3>
                 <div class="st-resume-timeline-duration">2006 - 2010</div>
@@ -570,7 +593,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
                 </div>
-              </div> <!-- st-resume-timeline -->
+              </div> <!-- st-resume-timeline --> --}}
             </div>
           </div>
         </div>
@@ -595,14 +618,15 @@
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio1_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+              <a href="assets/img/portfolio/encomiendas.jpg" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio1.jpg" alt="portfolio">
+                    <div class="portafolios-bg-img" style="background-image: url(assets/img/portfolio/encomiendas.jpg);
+                    background-position: top;"></div>
                 </div>
                 <div class="st-portfolio-item-hover">
                   <i class="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>Encomiendas aplicativo</h5>
+                  <p>Cootranshuila</p>
                 </div>
               </a>
             </div>
@@ -611,14 +635,15 @@
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio2_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+              <a href="assets/img/portfolio/seguimiento.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio2.jpg" alt="portfolio">
+                    <div class="portafolios-bg-img" style="background-image: url(assets/img/portfolio/seguimiento.png);
+                    background-position: top;"></div>
                 </div>
                 <div class="st-portfolio-item-hover">
                   <i class="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>Seguimiento Encomienda</h5>
+                  <p>Cootranshuila</p>
                 </div>
               </a>
             </div>
@@ -627,14 +652,14 @@
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio3_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+              <a href="assets/img/portfolio/comprobantes.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio3.jpg" alt="portfolio">
+                    <div class="portafolios-bg-img" style="background-image: url(assets/img/portfolio/comprobantes.png)"></div>
                 </div>
                 <div class="st-portfolio-item-hover">
                   <i class="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>Comprobantes</h5>
+                  <p>Cootranshuila</p>
                 </div>
               </a>
             </div>
@@ -643,14 +668,14 @@
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio4_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+              <a href="assets/img/portfolio/generarComprobantes.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio4.jpg" alt="portfolio">
+                    <div class="portafolios-bg-img" style="background-image: url(assets/img/portfolio/generarComprobantes.png)"></div>
                 </div>
                 <div class="st-portfolio-item-hover">
                   <i class="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>Generar Comprobantes</h5>
+                  <p>Cootranshuila</p>
                 </div>
               </a>
             </div>
@@ -659,14 +684,14 @@
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio5_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+              <a href="assets/img/portfolio/archivosex.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio5.jpg" alt="portfolio">
+                    <div class="portafolios-bg-img" style="background-image: url(assets/img/portfolio/archivosex.png)"></div>
                 </div>
                 <div class="st-portfolio-item-hover">
                   <i class="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>Generacion de archivos</h5>
+                  <p>Cootranshuila</p>
                 </div>
               </a>
             </div>
@@ -675,24 +700,24 @@
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio6_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+              <a href="assets/img/portfolio/archivodiseno.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio6.jpg" alt="portfolio">
+                    <div class="portafolios-bg-img" style="background-image: url(assets/img/portfolio/archivodiseno.png)"></div>
                 </div>
                 <div class="st-portfolio-item-hover">
                   <i class="fas fa-plus-circle"></i>
-                  <h5>Product Design</h5>
-                  <p>Design / Marketing</p>
+                  <h5>Diseño de base de datos</h5>
+                  <p>Cootranshuila</p>
                 </div>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-lg-12 text-center">
+        {{-- <div class="col-lg-12 text-center">
           <div class="st-portfolio-btn">
             <a href="#" class="st-btn st-style1 st-color1">Load More</a>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
     <div class="st-height-b100 st-height-lg-b80"></div>
@@ -836,7 +861,7 @@
   <!-- End Review Seciton -->
 
   <!-- Start Blog Seciton -->
-  <section id="blog">
+  {{-- <section id="blog">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
       <div class="st-section-heading st-style1">
@@ -957,7 +982,7 @@
       </div><!-- .st-slider -->
     </div>
     <div class="st-height-b95 st-height-lg-b75"></div>
-  </section>
+  </section> --}}
   <!-- End Blog Seciton -->
 
   <!-- Start Contact Seciton -->
@@ -979,6 +1004,7 @@
           <h3 class="st-contact-title">Mandame un Correo</h3>
           <div id="st-alert"></div>
           <form action="contactanos" method="POST" class="st-contact-form" id="contact-form">
+            {{-- @csrf --}}
             <div class="st-form-field">
               <input type="text" id="name" name="name" placeholder="Tu nombre" required>
             </div>
@@ -1060,7 +1086,7 @@
   <footer>
     <div class="container">
       <div class="st-copyright-wrap text-center">
-        <div class="st-copyright-text">© 2022. CriXus Developer.</div>
+        <div class="st-copyright-text">© <span id="year"></span>. CriXus Developer.</div>
       </div>
     </div>
   </footer>
@@ -1079,6 +1105,21 @@
     function onSubmit(token) {
       document.getElementById("contact-form").submit();
     }
+
+    setTimeout(function() {
+        var mensaje = document.getElementById('mensaje-flash');
+        if (mensaje) {
+            mensaje.style.display = 'none';
+        }
+    }, 4000);
   </script>
+
+  <style>
+    .portafolios-bg-img {
+        width: 100%;
+        height: 13rem;
+        background-position: center;
+    }
+  </style>
 </body>
 </html>
