@@ -22,4 +22,4 @@ Route::get('/', function () {
 
 Route::get('/descargar-cv', [FormularioController::class,'descargar_cv']);
 
-Route::post('contactanos', [FormularioController::class, 'sendContactForm']);
+Route::post('contactanos', [FormularioController::class, 'sendContactForm'])->name('send-email');

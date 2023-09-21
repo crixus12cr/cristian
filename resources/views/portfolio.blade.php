@@ -1003,8 +1003,8 @@
         <div class="col-lg-6">
           <h3 class="st-contact-title">Mandame un Correo</h3>
           <div id="st-alert"></div>
-          <form action="contactanos" method="POST" class="st-contact-form" id="contact-form">
-            {{-- @csrf --}}
+          <form action="{{ url('send-email') }}" method="POST" class="st-contact-form" id="contact-form">
+            @csrf
             <div class="st-form-field">
               <input type="text" id="name" name="name" placeholder="Tu nombre" required>
             </div>
